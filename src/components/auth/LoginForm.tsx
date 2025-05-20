@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -30,12 +31,12 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
   return (
     <form 
       onSubmit={handleSubmit(submitHandler)}
-      className="w-full max-w-[358px] flex flex-col gap-[25px] mt-[45px] max-md:max-w-xs max-sm:max-w-[280px]"
+      className="w-full max-w-[358px] flex flex-col gap-[20px] mt-[30px] md:mt-[45px] px-4 md:px-0 max-w-[90%] md:max-w-[358px]"
     >
       <input
         type="email"
         placeholder="Endereço de e-mail"
-        className="w-full h-[65px] text-xl text-[rgba(0,0,0,0.54)] bg-white px-5 py-0 rounded-[20px_0] border-[none] max-sm:h-[55px] max-sm:text-lg"
+        className="w-full h-[55px] md:h-[65px] text-lg md:text-xl text-[rgba(0,0,0,0.54)] bg-white px-5 py-0 rounded-[20px_0] border-[none]"
         {...register("email", { 
           required: "Email is required",
           pattern: {
@@ -49,7 +50,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
       <input
         type="password"
         placeholder="Senha"
-        className="w-full h-[65px] text-xl text-[rgba(0,0,0,0.54)] bg-white px-5 py-0 rounded-[20px_0] border-[none] max-sm:h-[55px] max-sm:text-lg"
+        className="w-full h-[55px] md:h-[65px] text-lg md:text-xl text-[rgba(0,0,0,0.54)] bg-white px-5 py-0 rounded-[20px_0] border-[none]"
         {...register("password", { 
           required: "Password is required",
           minLength: {
@@ -61,10 +62,10 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
       />
       
       <div className="flex flex-col items-center gap-[5px] mt-2">
-        <a href="#" className="text-white text-base underline">
+        <a href="#" className="text-[#000077] font-medium text-base underline">
           Esqueceu a senha?
         </a>
-        <a href="#" className="text-white text-base underline">
+        <a href="#" className="text-[#000077] font-medium text-base underline">
           Termos de serviço
         </a>
       </div>
@@ -72,7 +73,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
       <button 
         type="submit"
         disabled={isSubmitting}
-        className="w-[226px] h-[87px] text-white text-2xl shadow-[4px_4px_4px_2px_rgba(0,0,0,0.25)] cursor-pointer mx-auto my-5 rounded-[27px] border-[none] bg-[#4a4a4a] hover:bg-[#3a3a3a] transition-colors max-sm:w-[200px] max-sm:h-[70px] max-sm:text-xl"
+        className="w-[200px] h-[70px] md:w-[226px] md:h-[87px] text-white text-xl md:text-2xl shadow-[4px_4px_4px_2px_rgba(0,0,0,0.25)] cursor-pointer mx-auto my-5 rounded-[27px] border-[none] bg-[#4a4a4a] hover:bg-[#3a3a3a] transition-colors"
       >
         CADASTRAR
       </button>
