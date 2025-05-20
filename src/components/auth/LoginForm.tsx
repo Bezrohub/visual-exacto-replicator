@@ -73,9 +73,10 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
       <button 
         type="submit"
         disabled={isSubmitting}
-        className="w-[226px] h-[87px] text-white text-2xl shadow-[4px_4px_4px_2px_rgba(0,0,0,0.25)] cursor-pointer mx-auto my-5 rounded-[27px] border-[none] bg-gradient-to-b from-[#040479] to-[#8484F0] hover:opacity-90 transition-opacity max-sm:w-[200px] max-sm:h-[70px] max-sm:text-xl"
+        className="animate-button w-[226px] h-[87px] text-white text-2xl shadow-[4px_4px_4px_2px_rgba(0,0,0,0.25)] cursor-pointer mx-auto my-5 rounded-[27px] border-[none] bg-gradient-to-b from-[#040479] to-[#8484F0] hover:opacity-90 transition-all relative overflow-hidden max-sm:w-[200px] max-sm:h-[70px] max-sm:text-xl"
       >
-        CADASTRAR
+        <span className="relative z-10">CADASTRAR</span>
+        <span className="absolute inset-0 bg-gradient-to-r from-[#8484F0] to-[#040479] opacity-0 hover:opacity-100 transition-opacity duration-700"></span>
       </button>
     </form>
   );
